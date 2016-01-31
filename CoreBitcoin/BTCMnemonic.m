@@ -71,7 +71,10 @@ static inline NSUInteger BTCMnemonicIntegerFrom11Bits(uint8_t* buf, int bitIndex
 - (id) initWithWords:(NSArray*)words password:(NSString*)password wordListType:(BTCMnemonicWordListType)wordListType {
     if (!words) return nil;
 
-    if (words.count != 12 &&
+    if (words.count != 3 &&
+        words.count != 6 &&
+        words.count != 9 &&
+        words.count != 12 &&
         words.count != 15 &&
         words.count != 18 &&
         words.count != 21 &&
